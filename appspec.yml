@@ -1,0 +1,10 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /var/www/smbtest/
+hooks:
+  BeforeInstall:
+    - location: scripts/vhost.sh
+      timeout:
+      runas: root
